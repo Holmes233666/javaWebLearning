@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*body{
+            margin: 0;
+            padding: 0;
+        }*/
+        #navbar{
+            width: 100%;
+            height: 50px;
+            background-color: grey;
+
+            display: flex;  /* 弹性布局 */
+            flex-direction: row;  /* 主轴方向 */
+            /* 子元素空间布局 */
+            justify-content: space-between;  /* 两端对齐 */
+            /* flex-start
+            flex-end
+            center： 居中
+            space-between：两端对齐
+            space-around: 平分剩余空间
+            */
+
+            align-items: center;  /* 垂直居中 */
+        }
+        /* 后代选择器 */
+        #navbar h1{
+            color: #fff;
+            float: left;
+            font-family: "楷体";
+        }
+        #navbar a{
+            color: #fff;
+            float: right;
+            padding: auto;
+            border: auto;
+            text-decoration: none;
+        }
+
+        .myform{
+            display: flex;
+            flex-direction: row; 
+            flex-wrap: nowrap;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .myform input[type="text"], .myform input[type="radio"], .myform select{
+            padding: 5px;
+        }
+        
+        .myform input[type="buttom"], .myform input[type="reset"]{
+            padding: 5px;
+            margin-top: 15px;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+
+        th, td{ 
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th{
+            background-color: #f2f2f2;
+        }
+        
+        tr:nth-child(even){
+            background-color: #f2f2f2;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id = "navbar">
+        <h1>Tlias智能学习辅助系统</h1>
+        <a href="#">退出登录</a>
+    </div>
+
+    
+    <form action="/save" method = "post" class = "myform">
+        <label for = "name"> 姓名： 
+            <input type="text" name = "name" placeholder="请输入姓名">
+
+            <label for = "gender">性别： <label><input type="radio" name = "gender" value = "1"> 男
+                <label><input type="radio" name = "gender" value = "2"> 女
+        
+            <label for = "gender">职位： <select id = "position" name = "position">
+                <option value="1">前端工程师</option>
+                <option value="2">后端工程师</option>
+                <option value="3">全栈工程师</option>
+              </select>
+
+        查询： <input type="submit" name = "buttom">
+        清空： <input type="reset" name = "reset">
+    </form>
+    
+    <table>
+        <!-- 定义表头 -->
+        <thead>
+            <!-- 一个tr就是一行表头 -->
+            <tr>
+                <!-- th: 表头单元格 -->
+                <th>姓名</th>
+                <th>性别</th>
+                <th>头像</th>
+                <th>职位</th>
+                <th>入职日期</th>
+                <th>最后操作时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <!-- 定义表体 -->
+        <tbody>
+            <!-- 一个tr就是一行数据 -->
+            <tr>
+                <!-- td: 数据单元格 -->
+                <td>张三</td>
+                <td>男</td>
+                <td><img src="img/1.jpg" alt="头像"></td>
+                <td>前端工程师</td>
+                <td>2020-01-01</td>
+                <td>2020-01-01 12:00:00</td>
+                <td class="action-buttons">
+                    <button type="button"> 编辑</button>
+                    <button type="button"> 删除</button>
+                </td>
+                </td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td>女</td>
+                <td><img src="2.jpg" alt="头像"></td>
+                <td>后端工程师</td>
+                <td>2020-01-01</td>
+                <td>2020-01-01 12:00:00</td>
+                <td class="action-buttons">
+                    <button type="button"> 编辑</button>
+                    <button type="button"> 删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>王五</td>
+                <td>女</td>
+                <td><img src="2.jpg" alt="头像"></td>
+                <td>后端工程师</td>
+                <td>2020-01-01</td>
+                <td>2020-01-01 12:00:00</td>
+                <td class="action-buttons">
+                    <button type="button"> 编辑</button>
+                    <button type="button"> 删除</button>
+                </td>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-函数</title>
+</head>
+<body>
+  
+
+  <script>
+    let user = {
+      name: 'Tom',
+      age:20,
+      gender: '男',
+      sing: function () {alert(this.name + ' are singing.')}
+    }
+
+    alert(user.age);
+    user.sing();
+  </script> 
+
+  <script>
+    let user2 = {
+      name: 'Tom',
+      age:20,
+      gender: '男',
+      sing: () => {alert(this.name + ' are singing.')}  //注意：在箭头函数中，当前this指向的不是user2，是user2的父级【不推荐】
+    }
+
+    alert(user.age);
+    user.sing();
+
+    let person = {
+      name: 'Tom',
+      age:20
+    }
+
+    alert(person);  // 弹出[object Object]
+
+    alert(JSON.stringify(person));  // 弹出{"name":"Tom","age":20}
+
+    let personJson = '{"name":"Tom","age":20}';
+    // 转为对象
+    let personObj = JSON.parse(personJson);
+    alert(personObj.name);
+    
+  </script> 
+</body>
+</html>

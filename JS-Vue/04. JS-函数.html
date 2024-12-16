@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-函数</title>
+</head>
+<body>
+  
+
+  <script>
+    // 函数：具名函数
+      function add(a, b) {
+        return a + b;
+      }
+
+      let a = add(6, 7, 30);  // 传入参数可以和函数定义的参数数量不一样
+      console.log(a);
+
+    // 匿名函数
+      let sub = function(a, b) {  // 函数表达式
+        return a - b;
+      }
+
+      let b = sub(10, 5);       
+      console.log(b);
+
+      let mul = (a, b) => {a * b};  // 箭头函数
+
+      b = mul(3, 4);
+      console.log(b);
+
+  </script>
+</body>
+</html>

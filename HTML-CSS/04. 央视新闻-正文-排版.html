@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新思想引领新征程</title>
+    <!-- 方式二：内部样式，定义style标签，可以写在页面任何位置，通常写在head标签中 --> 
+    <style>
+        /* 选择器：标签选择器，选择所有的span标签，当前页面的所有的span都是灰色 */
+        span {
+            /* 英文单词表示法 */
+            /* color: grey; */
+            /* RGB 表示法 */
+            color: rgb(178, 178, 178);
+            /* RGBA表示法 */
+            /* color: rgba(255, 120, 0, 0.5); */
+            /* 十六进制表示法 */
+            /* color: #0000ff; */
+        }
+
+        a{
+            text-decoration: none; /* 去掉超链接的下划线 */
+        }
+     </style>
+    <!-- 方式三：外部样式，定义一个外部样式表文件，通过link标签引入 -->
+    <!-- <link rel="stylesheet" href="./CSS/news.css"> -->
+</head>
+<body>
+    <!-- 标题：还有h1-h6六个标签，分别表示标题1-6级，字体大小逐级减小，h1最大，h6最小。 -->
+    <h1>【新思想引领新征程】推进长江</h1>
+    
+    <!-- 定义一个超链接：显式文本：央视网，链接地址：http://www.cctv.com -->
+    <a href="http://www.cctv.com" target="_blank">央视网</a>  <!-- _blank表示在新窗口打开链接 -->
+
+    <!-- 方式一：行内样式：span标签用于对文本进行样式设置 -->
+    <!-- <span style="color: grey;" >2022年5月15日 20:07</span>  -->
+
+    <!-- 方式二：内部样式：通常写在head中 -->
+    <span>2022年5月15日 20:07</span>
+    <br>
+    <!-- 新闻正文 -->
+    <!-- video标签属性
+        src：视频文件的路径
+        controls：显示播放控件
+        autoplay：自动播放
+        width：视频宽度 （建议宽度和高度只设置一个，另一个会等比例缩放）
+            单位：
+                px: 像素
+                % : 百分比 （付对于父元素的百分比——body）
+        height：视频高度
+    -->
+    
+    <video src="video/news.mp4" controls autoplay width="300px"></video>
+
+    <!-- <audio src="audio/news.mp3" controls autoplay></audio> -->
+
+    <!-- 段落标签：<p> -->
+    <p>
+        新华社北京5月15日电 习近平总书记在纪念五四运动100周年大会上的重要讲话，深刻阐述了新时代青年运动的时代使命、根本任务、奋斗目标，为推进新时代青年运动提供了根本遵循。
+    </p>
+    <p>
+        习近平总书记指出，新时代青年运动的时代使命，就是要坚定理想信念，坚定中国特色社会主义道路自信、理论自信、制度自信、文化自信
+    </p>
+
+    <!-- img属性：
+        src：图片的路径
+            - 绝对路径：
+                - 绝对的磁盘路径 （不推荐）
+                - 网络路径
+            - 相对路径
+                - ./ : 当前目录（可以省略）
+                - ../ : 上一级目录
+        width：图片宽度
+        height：图片高度
+        alt：图片的替代文本，当图片无法显示时，会显示替代文本 
+    -->
+    <img src = "img/1.gif" width="300px" alt="新思想引领新征程">
+
+    <p>
+        习近平总书记指出，新时代青年运动的根本任务，就是要立德树人，培养担当民族复兴大任的时代新人。
+    </p>
+</body>
+</html>
